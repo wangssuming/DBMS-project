@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<title>Cafe</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+}
+.bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: url("http://image.cache.storm.mg/styles/smg-800x533-fp/s3/media/image/2017/07/20/20170720-010304_U9180_M303219_3606.jpg?itok=qRgQHC87");
+    min-height: 100%;
+}
+.menu {
+    display: none;
+}
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s2">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s2">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+    <div class="w3-col s2">
+      <a href="#menu" class="w3-button w3-block w3-black">MENU</a>
+    </div>
+	<div class="w3-col s2">
+      <a href="#orders" class="w3-button w3-block w3-black">ORDERS</a>
+    </div>
+    <div class="w3-col s2">
+      <a href="#log out" class="w3-button w3-block w3-black">LOGOUT</a>
+    </div>
+	<div class="w3-col s2">
+      <a href="#where" class="w3-button w3-block w3-black">WHERE</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-normal-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag"></span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">the<br>Cafe</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white"></span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-normal w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE CAFE</span></h5>
+    <p>Coffee is more than a beverage, however. It is a memory, an anticipation, a lifetime of consoling moments of modest pleasure woven into our lives</p>
+    <p>Pursuing good one to make your life coclorful is our mission</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
+      <p>Chef, Coffeeist and Owner: Brown Lee</p>
+    </div>
+    <img src=".\images\images\coffe2.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE MENU</span></h5>
+
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Beans');" id="myLink">
+        <div class="w3-col s6 tablink">Beans</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Appliances');">
+        <div class="w3-col s6 tablink">Appliances</div>
+      </a>
+    </div>
+
+    <div id="Beans" class="w3-container menu w3-padding-48 w3-card">
+        <h5>Blue Mountain   $700/bag</h5>
+         <p class="w3-text-grey">Blue Mountains region of Jamaica. Also grown in Kenya, Hawaii, Haiti, Papua New Guinea (where it is known as PNG Gold) and Cameroon.</p><br>
+           <div class="w3-container" id="buy" style="padding-bottom:32px;">
+            <form action="order.php" method="post" >
+             <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Amount" required name="Amount"></p>
+             <input type = 'hidden' name = 'Product' value = 'Blue Mountain'>
+			 <input type = 'hidden' name = 'Ship' value = 'not shipped'>
+             <p><button class="w3-button w3-black" type="submit">buy</button></p>
+           </div>
+      </form>
+
+      <h5>Colombian   $700/bag</h5>
+      <p class="w3-text-grey">When Colombian coffee is freshly roasted it has a bright acidity, is heavy in body and is intensely aromatic. Colombia accounts for about 12% of the coffee market (by value) in the world, third in volume after Vietnam and Brazil.</p><br>
+        <div class="w3-container" id="buy" style="padding-bottom:32px;">
+           <form action="order.php" method="post" >
+             <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Amount" required name="Amount"></p>
+            <input type = 'hidden' name = 'Product' value = 'Colombian'>
+			<input type = 'hidden' name = 'Ship' value = 'not shipped'>
+             <p><button class="w3-button w3-black" type="submit">buy</button></p>
+           </div>
+       </form>
+
+      <h5>Geisha   $1200/bag</h5>
+      <p class="w3-text-grey">Geisha or Gesha is a variety of coffee believed to be originated in the Gesha village in Ethiopia. It is considered to produce a very aromatic and floral cup of coffee and the demand for it has grown in recent years</p><br>
+         <div class="w3-container" id="buy" style="padding-bottom:32px;">
+           <form action="order.php" method="post" >
+             <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Amount" required name="Amount"></p>
+             <input type = 'hidden' name = 'Product' value = 'Geisha'>
+			 <input type = 'hidden' name = 'Ship' value = 'not shipped'>
+             <p><button class="w3-button w3-black" type="submit" >buy</button></p>
+           </div>
+      </form>
+
+      <h5>Kona   $1600/bag</h5>
+      <p class="w3-text-grey">It is one of the most expensive coffees in the world. Only coffee from the Kona Districts can be described as "Kona." The weather of sunny mornings, cloud or rain in the afternoon, little wind, and mild nights combined with porous, mineral-rich volcanic soil create favorable coffee growing conditions.</p><br>
+        <div class="w3-container" id="buy" style="padding-bottom:32px;">
+          <form action="order.php" method="post" >
+             <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Amount" required name="Amount"></p>
+             <input type = 'hidden' name = 'Product' value = 'Kona'>
+			 <input type = 'hidden' name = 'Ship' value = 'not shipped'>
+             <p><button class="w3-button w3-black" type="submit">buy</button></p>
+           </div>
+      </form>
+ </div>
+      
+
+    <div id="Appliances" class="w3-container menu w3-padding-48 w3-card">
+        <h5>Pour-Over Dripper   $600</h5>
+          <p class="w3-text-grey">Kalita Wave Glass Dripper: A darling of Japanese coffee culture, the Kalita Wave is more user-friendly than other pour-over drippers, such as the Hario V60 or a Chemex, with a flat bottom and smaller holes.</p><br>
+           <div class="w3-container" id="buy" style="padding-bottom:32px;">
+            <form action="order.php" method="post" >
+             <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Amount" required name="Amount"></p>
+             <input type = 'hidden' name = 'Product' value = 'Pour-Over Dripper'>
+			 <input type = 'hidden' name = 'Ship' value = 'not shipped'>
+             <p><button class="w3-button w3-black" type="submit">buy</button></p>
+           </div>
+      </form>
+
+        <h5>Automated Machine   $10500</h5>
+          <p class="w3-text-grey">Technivorm Moccamaster KBT 10-Cup: Handmade in the Netherlands, Technivorm's Moccamaster doesn't just look good but it's also highly efficient, pumping out 10 delicious cups in just six minutes. Its thermal carafe then keeps the brew hot for up to six hours.</p><br>
+           <div class="w3-container" id="buy" style="padding-bottom:32px;">
+            <form action="order.php" method="post" >
+             <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Amount" required name="Amount"></p>
+             <input type = 'hidden' name = 'Product' value = 'Automated Machine'>
+	         <input type = 'hidden' name = 'Ship' value = 'not shipped'>
+             <p><button class="w3-button w3-black" type="submit">buy</button></p>
+           </div>
+      </form>
+
+        <h5>Espresso Machine   $28888</h5>
+          <p class="w3-text-grey">Modeled after La Marzocco's storied Linea Classic machine, found in cafes around the world, the Mini plays host to all the familiar bells and whistles: a pre-infusion brew paddle, a hefty steam boiler, a swift temperature wheel adjustment and LED lights above the drip tray.</p><br>
+           <div class="w3-container" id="buy" style="padding-bottom:32px;">
+            <form action="order.php" method="post" >
+             <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Amount" required name="Amount"></p>
+             <input type = 'hidden' name = 'Product' value = 'Espresso Machine'>
+			 <input type = 'hidden' name = 'Ship' value = 'not shipped'>
+             <p><button class="w3-button w3-black" type="submit">buy</button></p>
+           </div>
+  </form>
+
+</div>
+
+
+<!-- ORDERS Container -->
+<div class="w3-container" id="orders">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE ORDER</span></h5>
+<div>
+	<img src=".\images\images\coffee4.jpg" style="width:100%;max-width:1000px;margin-top:32px;"></div>
+<p><strong>go to check your orders:</strong> </p>
+	<form action="revise.php" method="post" >   
+    <p><button class="w3-button w3-black" type="submit">Revise your personal information</button></p>
+    </form>
+    <form action="select.php" method="post" >   
+      <p><button class="w3-button w3-black" type="submit">Check</button></p>
+    </form>
+	<form action="update.php" method="post" >   
+      <p><button class="w3-button w3-black" type="submit">Update</button></p>
+    </form>
+	<form action="delete.php" method="post" >   
+      <p><button class="w3-button w3-black" type="submit">Cancel</button></p>
+    </form>
+</div>
+</div>
+
+<!-- Log out Container -->
+<div class="w3-container" id="log out" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">LOG OUT</span></h5>
+        <div>
+	<img src=".\images\images\coffe.jpg" style="width:100%;max-width:1000px;margin-top:32px;"></div>
+   
+    <p><strong>log out from your account:</strong> </p>
+    <form action="logout.php" method="post" >   
+      <p><button class="w3-button w3-black" type="submit">log out</button></p>
+    </form>
+  </div>
+</div>
+
+
+
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE TO FIND US</span></h5>
+    <p><strong>Find us at National Chiao Tung University.</strong></p>
+	<p><strong>Contact us:</strong> 03-5712121</p>
+	<p><strong>Serves time:</strong> everyday from 8am to 5pm.</p>
+    <div id="googleMap" style="width:100%;height:400px;"></div>
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+<!-- Add Google Maps -->
+<script>
+function myMap()
+{
+  myCenter=new google.maps.LatLng(24.789067,120.999263);
+  var mapOptions= {
+    center:myCenter,
+    zoom:12, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWm51XD0cuRU_C3RlyPWAPZLWInAJaWJ0&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+</body>
+</html>
